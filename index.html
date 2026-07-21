@@ -236,7 +236,7 @@
         linear-gradient(135deg, rgba(214, 169, 79, 0.28), rgba(127, 179, 255, 0.12)),
         #08111f;
       border: 1px solid rgba(255, 255, 255, 0.1);
-      font-size: 26px;
+      font-size: 24px;
       font-weight: 900;
       color: var(--gold-light);
     }
@@ -352,8 +352,6 @@
 
     .visual-panel {
       overflow: hidden;
-      display: flex;
-      flex-direction: column;
       min-height: 520px;
     }
 
@@ -370,12 +368,51 @@
       font-size: 13px;
     }
 
-    .screenshots {
+    .visual-content {
       padding: 20px;
+      height: calc(100% - 52px);
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .portfolio-item {
+      padding: 20px;
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background:
+        linear-gradient(135deg, rgba(214, 169, 79, 0.1), rgba(127, 179, 255, 0.05)),
+        rgba(13, 24, 41, 0.92);
+    }
+
+    .portfolio-label {
+      display: inline-flex;
+      margin-bottom: 12px;
+      color: #181006;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold));
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: 900;
+    }
+
+    .portfolio-item h3 {
+      margin: 0 0 8px;
+      font-size: 24px;
+    }
+
+    .portfolio-item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .screenshots {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 14px;
-      flex: 1;
     }
 
     .screenshot-placeholder {
@@ -594,24 +631,31 @@
       <section class="masthead">
         <div class="masthead-inner">
           <h1 class="page-title">
-            Apps with clean design, useful data, and everyday purpose.
+            Atlas Digital Labs LLC
           </h1>
 
           <p class="lead">
-            Atlas Digital Labs LLC builds consumer software products. Our first featured app is
-            <span class="title-accent">Whiskey Atlas</span>, a better way to collect, taste,
-            discover, and learn about whiskey.
+            A mobile app company building consumer software with clean design, useful data,
+            and practical everyday value. Our first product in development is
+            <span class="title-accent">Whiskey Atlas</span>.
           </p>
         </div>
       </section>
 
       <section class="section-label" aria-label="Developed apps">
-        <h2>Developed Apps</h2>
-        <span>Click an app to update the page</span>
+        <h2>Apps & Products</h2>
+        <span>Click a product to update the page</span>
       </section>
 
       <section class="app-scroll">
-        <button class="app-card active" data-app="whiskey">
+        <button class="app-card active" data-app="company">
+          <span class="app-status">Company</span>
+          <div class="app-icon">AD</div>
+          <h3>Atlas Digital Labs</h3>
+          <p>The home for current and future Atlas Digital Labs products.</p>
+        </button>
+
+        <button class="app-card" data-app="whiskey">
           <span class="app-status">In Development</span>
           <div class="app-icon">WA</div>
           <h3>Whiskey Atlas</h3>
@@ -624,70 +668,55 @@
           <h3>Future App</h3>
           <p>Additional Atlas Digital Labs products will appear here.</p>
         </button>
-
-        <button class="app-card" data-app="company">
-          <span class="app-status">Company</span>
-          <div class="app-icon">AD</div>
-          <h3>Atlas Digital Labs</h3>
-          <p>A home for current and future consumer software projects.</p>
-        </button>
       </section>
 
       <section class="app-detail">
         <div class="detail-panel">
-          <div class="app-kicker" id="detailKicker">Featured App</div>
-          <h2 class="detail-title" id="detailTitle">Whiskey Atlas</h2>
+          <div class="app-kicker" id="detailKicker">Company Overview</div>
+          <h2 class="detail-title" id="detailTitle">Atlas Digital Labs LLC</h2>
           <p class="detail-description" id="detailDescription">
-            Whiskey Atlas is a whiskey companion app designed to help users organize bottles,
-            track tastings, explore brands, follow releases, and build a smarter personal collection.
+            Atlas Digital Labs LLC is a mobile app development company based in Ohio,
+            focused on building consumer software products with polished interfaces,
+            useful data, and strong everyday utility.
           </p>
 
           <ul class="feature-list" id="featureList">
-            <li><span class="check">✓</span><span>Save bottles to a personal collection and wish list.</span></li>
-            <li><span class="check">✓</span><span>Track structured tasting notes for aroma, palate, finish, and value.</span></li>
-            <li><span class="check">✓</span><span>Explore brands, bottles, releases, and whiskey data in one place.</span></li>
+            <li><span class="check">✓</span><span>Building a portfolio of consumer software products.</span></li>
+            <li><span class="check">✓</span><span>Focused on clean design, practical workflows, and useful data.</span></li>
+            <li><span class="check">✓</span><span>Launching first with Whiskey Atlas, currently in development.</span></li>
           </ul>
 
           <div class="actions">
             <a class="button primary" href="mailto:brian@atlasdglabs.com">Contact Atlas Digital Labs</a>
-            <a class="button secondary" href="#screenshots">View App Preview</a>
+            <a class="button secondary" href="#apps">View Products</a>
           </div>
         </div>
 
-        <div class="visual-panel" id="screenshots">
+        <div class="visual-panel" id="apps">
           <div class="visual-header">
-            <strong id="visualTitle">Whiskey Atlas Preview</strong>
-            <span>Replace with real screenshots later</span>
+            <strong id="visualTitle">Current Product Focus</strong>
+            <span id="visualNote">Company portfolio</span>
           </div>
 
-          <div class="screenshots">
-            <div class="screenshot-placeholder">
-              <div>
-                <div class="phone-bar"></div>
-                <div class="mock-title" id="mockTitleOne">Collection Shelf</div>
-                <div class="mock-lines">
-                  <div class="mock-line"></div>
-                  <div class="mock-line medium"></div>
-                  <div class="mock-line short"></div>
-                </div>
+          <div class="visual-content" id="visualContent">
+            <div class="portfolio-grid">
+              <div class="portfolio-item">
+                <span class="portfolio-label">First Product</span>
+                <h3>Whiskey Atlas</h3>
+                <p>
+                  A whiskey companion app designed to help users collect bottles,
+                  track tastings, discover brands, follow releases, and build a smarter
+                  personal whiskey collection.
+                </p>
               </div>
-              <div class="mock-card" id="mockCardOne">
-                Placeholder for a real Whiskey Atlas app screenshot.
-              </div>
-            </div>
 
-            <div class="screenshot-placeholder">
-              <div>
-                <div class="phone-bar"></div>
-                <div class="mock-title" id="mockTitleTwo">Tasting Flow</div>
-                <div class="mock-lines">
-                  <div class="mock-line medium"></div>
-                  <div class="mock-line"></div>
-                  <div class="mock-line short"></div>
-                </div>
-              </div>
-              <div class="mock-card" id="mockCardTwo">
-                Add iPhone screenshots when the app screens are ready.
+              <div class="portfolio-item">
+                <span class="portfolio-label">Company Direction</span>
+                <h3>More apps over time</h3>
+                <p>
+                  Atlas Digital Labs is structured to support multiple consumer apps as
+                  new ideas move from concept to development.
+                </p>
               </div>
             </div>
           </div>
@@ -698,14 +727,14 @@
         <div class="company-card">
           <h3>Product Focused</h3>
           <p>
-            We build apps around clear user problems, simple workflows, and practical daily use.
+            Apps are built around clear user problems, simple workflows, and practical daily use.
           </p>
         </div>
 
         <div class="company-card">
           <h3>Data Driven</h3>
           <p>
-            Our products are designed around useful information, smart organization, and better discovery.
+            Products are designed around useful information, smart organization, and better discovery.
           </p>
         </div>
 
@@ -734,6 +763,42 @@
 
   <script>
     const apps = {
+      company: {
+        kicker: "Company Overview",
+        title: "Atlas Digital Labs LLC",
+        description:
+          "Atlas Digital Labs LLC is a mobile app development company based in Ohio, focused on building consumer software products with polished interfaces, useful data, and strong everyday utility.",
+        features: [
+          "Building a portfolio of consumer software products.",
+          "Focused on clean design, practical workflows, and useful data.",
+          "Launching first with Whiskey Atlas, currently in development."
+        ],
+        visualTitle: "Current Product Focus",
+        visualNote: "Company portfolio",
+        visualContent: `
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <span class="portfolio-label">First Product</span>
+              <h3>Whiskey Atlas</h3>
+              <p>
+                A whiskey companion app designed to help users collect bottles,
+                track tastings, discover brands, follow releases, and build a smarter
+                personal whiskey collection.
+              </p>
+            </div>
+
+            <div class="portfolio-item">
+              <span class="portfolio-label">Company Direction</span>
+              <h3>More apps over time</h3>
+              <p>
+                Atlas Digital Labs is structured to support multiple consumer apps as
+                new ideas move from concept to development.
+              </p>
+            </div>
+          </div>
+        `
+      },
+
       whiskey: {
         kicker: "Featured App",
         title: "Whiskey Atlas",
@@ -745,10 +810,40 @@
           "Explore brands, bottles, releases, and whiskey data in one place."
         ],
         visualTitle: "Whiskey Atlas Preview",
-        mockTitleOne: "Collection Shelf",
-        mockTitleTwo: "Tasting Flow",
-        mockCardOne: "Placeholder for a real Whiskey Atlas collection screenshot.",
-        mockCardTwo: "Placeholder for a real Whiskey Atlas tasting screenshot."
+        visualNote: "Replace with real app screenshots later",
+        visualContent: `
+          <div class="screenshots">
+            <div class="screenshot-placeholder">
+              <div>
+                <div class="phone-bar"></div>
+                <div class="mock-title">Collection Shelf</div>
+                <div class="mock-lines">
+                  <div class="mock-line"></div>
+                  <div class="mock-line medium"></div>
+                  <div class="mock-line short"></div>
+                </div>
+              </div>
+              <div class="mock-card">
+                Placeholder for a real Whiskey Atlas collection screenshot.
+              </div>
+            </div>
+
+            <div class="screenshot-placeholder">
+              <div>
+                <div class="phone-bar"></div>
+                <div class="mock-title">Tasting Flow</div>
+                <div class="mock-lines">
+                  <div class="mock-line medium"></div>
+                  <div class="mock-line"></div>
+                  <div class="mock-line short"></div>
+                </div>
+              </div>
+              <div class="mock-card">
+                Placeholder for a real Whiskey Atlas tasting screenshot.
+              </div>
+            </div>
+          </div>
+        `
       },
 
       "coming-soon": {
@@ -758,31 +853,32 @@
           "Atlas Digital Labs LLC is built to support more than one product. Future apps will be added here as they move from idea to development.",
         features: [
           "New consumer software products will be featured as they are developed.",
-          "Each app can have its own focused page content and preview area.",
-          "The company website can grow without rebuilding the whole site."
+          "Each app can have its own focused content and preview area.",
+          "The company site can grow as the app portfolio grows."
         ],
-        visualTitle: "Future App Preview",
-        mockTitleOne: "Product Concept",
-        mockTitleTwo: "App Preview",
-        mockCardOne: "Future app screenshots can be placed here.",
-        mockCardTwo: "This area is ready for the next Atlas Digital Labs product."
-      },
+        visualTitle: "Future Product Slot",
+        visualNote: "Reserved for future apps",
+        visualContent: `
+          <div class="portfolio-grid">
+            <div class="portfolio-item">
+              <span class="portfolio-label">Planned</span>
+              <h3>Future Atlas App</h3>
+              <p>
+                This product slot is reserved for the next Atlas Digital Labs app
+                after Whiskey Atlas.
+              </p>
+            </div>
 
-      company: {
-        kicker: "Company Overview",
-        title: "Atlas Digital Labs LLC",
-        description:
-          "Atlas Digital Labs LLC is a mobile app development company based in Ohio, focused on building consumer software with clean design, useful data, and practical everyday value.",
-        features: [
-          "Home for Whiskey Atlas and future Atlas Digital Labs products.",
-          "Designed to support app launches, support pages, privacy pages, and business inquiries.",
-          "Built as a simple, professional public presence for the company."
-        ],
-        visualTitle: "Company Website",
-        mockTitleOne: "App Portfolio",
-        mockTitleTwo: "Business Presence",
-        mockCardOne: "A clean home for current and future developed apps.",
-        mockCardTwo: "Use this website for Apple Developer, support, and business contact."
+            <div class="portfolio-item">
+              <span class="portfolio-label">Scalable Layout</span>
+              <h3>Ready for expansion</h3>
+              <p>
+                As new apps are developed, each product can have its own description,
+                feature list, screenshots, support information, and launch status.
+              </p>
+            </div>
+          </div>
+        `
       }
     };
 
@@ -792,10 +888,8 @@
     const detailDescription = document.getElementById("detailDescription");
     const featureList = document.getElementById("featureList");
     const visualTitle = document.getElementById("visualTitle");
-    const mockTitleOne = document.getElementById("mockTitleOne");
-    const mockTitleTwo = document.getElementById("mockTitleTwo");
-    const mockCardOne = document.getElementById("mockCardOne");
-    const mockCardTwo = document.getElementById("mockCardTwo");
+    const visualNote = document.getElementById("visualNote");
+    const visualContent = document.getElementById("visualContent");
 
     function loadApp(appKey) {
       const app = apps[appKey];
@@ -804,10 +898,8 @@
       detailTitle.textContent = app.title;
       detailDescription.textContent = app.description;
       visualTitle.textContent = app.visualTitle;
-      mockTitleOne.textContent = app.mockTitleOne;
-      mockTitleTwo.textContent = app.mockTitleTwo;
-      mockCardOne.textContent = app.mockCardOne;
-      mockCardTwo.textContent = app.mockCardTwo;
+      visualNote.textContent = app.visualNote;
+      visualContent.innerHTML = app.visualContent;
 
       featureList.innerHTML = app.features
         .map(feature => `<li><span class="check">✓</span><span>${feature}</span></li>`)

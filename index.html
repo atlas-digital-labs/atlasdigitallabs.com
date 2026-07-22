@@ -107,19 +107,11 @@
       max-width: 680px;
     }
 
-    .accent {
-      color: var(--gold-light);
-    }
-
     .selector-wrap {
       margin: 42px 0 22px;
     }
 
     .selector-title {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 16px;
       margin-bottom: 12px;
     }
 
@@ -238,10 +230,10 @@
     }
 
     .visual {
-      min-height: 360px;
+      min-height: 260px;
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
       background:
         linear-gradient(135deg, rgba(214, 169, 79, 0.1), transparent 45%),
         rgba(11, 20, 36, 0.82);
@@ -256,14 +248,7 @@
     .visual-copy {
       color: var(--muted);
       margin: 0;
-    }
-
-    .visual-note {
-      margin-top: 32px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
-      color: var(--soft);
-      font-size: 14px;
+      font-size: 17px;
     }
 
     .contact {
@@ -391,16 +376,10 @@
       </div>
 
       <div class="panel visual">
-        <div>
-          <div class="visual-title" id="visualTitle">Current Focus</div>
-          <p class="visual-copy" id="visualCopy">
-            Whiskey Atlas is currently in development.
-          </p>
-        </div>
-
-        <div class="visual-note" id="visualNote">
-          App screenshots can be added here once final screens are ready.
-        </div>
+        <div class="visual-title" id="visualTitle">Current Focus</div>
+        <p class="visual-copy" id="visualCopy">
+          Whiskey Atlas is currently in development.
+        </p>
       </div>
     </section>
 
@@ -431,8 +410,7 @@
           "Clean, practical product design"
         ],
         visualTitle: "Current Focus",
-        visualCopy: "Whiskey Atlas is currently in development.",
-        visualNote: "App screenshots can be added here once final screens are ready."
+        visualCopy: "Whiskey Atlas is currently in development."
       },
 
       whiskey: {
@@ -446,8 +424,7 @@
           "Whiskey discovery and bottle data"
         ],
         visualTitle: "Whiskey Atlas",
-        visualCopy: "A cleaner way to collect, taste, discover, and learn about whiskey.",
-        visualNote: "Replace this area with real app screenshots when available."
+        visualCopy: "A cleaner way to collect, taste, discover, and learn about whiskey."
       }
     };
 
@@ -461,7 +438,6 @@
       document.getElementById("description").textContent = item.description;
       document.getElementById("visualTitle").textContent = item.visualTitle;
       document.getElementById("visualCopy").textContent = item.visualCopy;
-      document.getElementById("visualNote").textContent = item.visualNote;
 
       document.getElementById("features").innerHTML = item.features
         .map(feature => `<li>${feature}</li>`)

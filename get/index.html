@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Download Whiskey Atlas for iPhone, iPad, or Android. Track your bottles, capture tasting notes, and see what everyone is tasting.">
+  <meta name="referrer" content="no-referrer">
+  <title>Download Whiskey Atlas</title>
+  <link rel="icon" href="icon.png">
+  <style>
+    :root { color-scheme: dark; font-family: Arial, Helvetica, sans-serif; background: #091d30; color: #f4f2ec; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100svh; display: grid; place-items: center; }
+    main { width: min(100%, 520px); padding: 36px 24px; text-align: center; }
+    .icon { display: block; width: 150px; height: 150px; margin: 0 auto 12px; }
+    h1 { color: #f0ca79; font: bold 34px/1.15 Georgia, serif; margin: 0 0 18px; }
+    p { font-size: 17px; line-height: 1.55; margin: 0 0 24px; }
+    .stores { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin: 16px 0 24px; }
+    .stores a { display: grid; place-items: center; min-width: 156px; min-height: 64px; }
+    .apple { width: 156px; height: 52px; }
+    .google { width: 190px; height: auto; }
+    a:focus-visible { outline: 3px solid #f0ca79; outline-offset: 5px; }
+    .status { min-height: 26px; font-size: 15px; color: #c5cdd3; }
+    footer { margin-top: 28px; font-size: 13px; color: #aebcc5; line-height: 1.5; }
+    footer a { color: inherit; text-underline-offset: 3px; }
+    .legal { font-size: 10px; margin: 22px auto 0; max-width: 370px; }
+    @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
+  </style>
+  <script src="redirect.js?v=1" defer></script>
+</head>
+<body>
+  <main>
+    <img class="icon" src="icon.png" alt="Whiskey Atlas globe and glass" width="150" height="150">
+    <h1>Whiskey Atlas</h1>
+    <p>Track your bottles.<br>Capture your tasting notes.<br>See what everyone&#8217;s tasting.</p>
+    <div class="stores" aria-label="Download Whiskey Atlas">
+      <a id="app-store" href="https://apps.apple.com/us/app/whiskey-atlas/id6795986165" aria-label="Download Whiskey Atlas on the App Store"><img class="apple" src="app-store.svg" alt="Download on the App Store" width="156" height="52"></a>
+      <a id="google-play" href="https://play.google.com/store/apps/details?id=com.whiskeyatlas.whiskey_atlas" aria-label="Get Whiskey Atlas on Google Play"><img class="google" src="google-play.png" alt="Get it on Google Play" width="190" height="74"></a>
+    </div>
+    <p class="status" id="status" role="status">Choose your app store.</p>
+    <noscript><p>Choose a download button above to continue.</p></noscript>
+    <footer>
+      Available in the United States. For adults of legal drinking age.<br>
+      <a href="/whiskey-atlas/support.html">Support</a> &middot; <a href="/whiskey-atlas/privacy.html">Privacy</a>
+      <p class="legal">Apple and the Apple logo are trademarks of Apple Inc. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
+    </footer>
+  </main>
+</body>
+</html>

@@ -24,15 +24,18 @@
     footer { margin-top: 28px; font-size: 13px; color: #aebcc5; line-height: 1.5; }
     footer a { color: inherit; text-underline-offset: 3px; }
     .legal { font-size: 10px; margin: 22px auto 0; max-width: 370px; }
+    .open-invite { display: inline-block; padding: 12px 20px; margin-bottom: 18px; color: #091d30; background: #f0ca79; border-radius: 6px; font-weight: bold; }
+    .open-invite[hidden] { display: none; }
     @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto; } }
   </style>
-  <script src="redirect.js?v=1" defer></script>
+  <script src="redirect.js?v=2" defer></script>
 </head>
 <body>
   <main>
     <img class="icon" src="icon.png" alt="Whiskey Atlas globe and glass" width="150" height="150">
     <h1>Whiskey Atlas</h1>
-    <p>Track your bottles.<br>Capture your tasting notes.<br>See what everyone&#8217;s tasting.</p>
+    <p id="intro">Track your bottles.<br>Capture your tasting notes.<br>See what everyone&#8217;s tasting.</p>
+    <a id="open-invite" class="open-invite" hidden>Open in Whiskey Atlas</a>
     <div class="stores" aria-label="Download Whiskey Atlas">
       <a id="app-store" href="https://apps.apple.com/us/app/whiskey-atlas/id6795986165" aria-label="Download Whiskey Atlas on the App Store"><img class="apple" src="app-store.svg" alt="Download on the App Store" width="156" height="52"></a>
       <a id="google-play" href="https://play.google.com/store/apps/details?id=com.whiskeyatlas.whiskey_atlas" aria-label="Get Whiskey Atlas on Google Play"><img class="google" src="google-play.png" alt="Get it on Google Play" width="190" height="74"></a>

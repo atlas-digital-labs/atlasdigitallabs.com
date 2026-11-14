@@ -1,8 +1,23 @@
 (() => {
   'use strict';
 
+  const params = new URLSearchParams(window.location.search);
+  const friend = params.get('friend') || '';
+  if (/^[a-f0-9]{8}(?:-[a-f0-9]{4}){3}-[a-f0-9]{12}$/i.test(friend)) {
+    const name = params.get('name') || '';
+    const invite = document.getElementById('open-invite');
+    const intro = document.getElementById('intro');
+    const status = document.getElementById('status');
+    invite.href = 'whiskeyatlas://friend?' + new URLSearchParams({ friend });
+    invite.hidden = false;
+    intro.textContent = /^[a-z0-9 ]{3,20}$/i.test(name)
+        ? name + ' invited you to connect on Whiskey Atlas.'
+        : 'You were invited to connect on Whiskey Atlas.';
+    status.textContent = 'New here? Install Whiskey Atlas and set up your profile. Then return to this invitation and tap Open in Whiskey Atlas.';
+    return;
+  }
   // Keep a manual store choice available for desktop users and shared links.
-  if (new URLSearchParams(window.location.search).has('choose')) return;
+  if (params.has('choose')) return;
 
   const ua = navigator.userAgent || '';
   const platform = navigator.userAgentData?.platform || navigator.platform || '';
